@@ -1,0 +1,239 @@
+    :root {
+    --primary-color:rgb(238, 77, 45);
+    --product-primary-color:#D0011B;
+    --white-color : #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #bdbdbd;
+    --fa-star-gold: #FFCE3D;
+    --fa-star-red: #D0011B;
+
+    
+
+    --navbar-height: 34px;
+    --header-height:120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+*{
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.grid {
+    width: 1300px;
+    max-width: 100%;
+    margin: 0  auto;
+}
+.grid__full-with {
+    width: 100%;
+}
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.333%;
+}
+.grid__column-5 {
+    padding-left: 5px;
+    width: 40%;
+}
+.grid__column-7 {
+    width: 60%;
+}
+.grid__column-2,
+.grid__column-7-product {
+    position: relative;
+}
+.grid__column-7-product--footer {
+    display: flex;
+}
+.grid__column-7-3 {
+    width: 33.3333%;
+}
+.margin-right-6 {
+    margin-right: 6px;
+}
+.grid__column-2-introduce {
+    padding-left: 5px;
+    width: 19%;
+}
+.grid__column-10-introduce {
+    padding-right: 5px;
+    width: 80%;
+} 
+.grid__product--12-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes growth {
+    from {
+        transform: scale(var(--growth__form));
+    }
+    to {
+        transform: scale(var(--growth__to));
+
+    }
+}
+.margin-left-80 {
+    margin-left: 80px;
+}
+.margin-right-80 {
+    margin-right: 80px;
+}
+.grid-mg-top {
+    padding-top: 24px;
+}
+.margin-left-16 {
+    margin-left: 16px;
+}
+.margin-left-right-60 {
+    margin-right: 60px;
+}
+.margin-left-right-30 {
+    margin-right: 30px;
+}
+/* BASE MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: fadeIn linear 0.2s;
+    z-index: 2;
+}
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.6);
+}
+.modal__body {
+    background-color: rgb(243, 241, 241);
+    margin:auto;
+    z-index: 3;
+    border-radius: 5px;
+    --growth__form: 0.7;
+    --growth__to: 1;
+    animation: growth linear 0.1s;
+    
+}
+.btn-size-s {
+    height: 32px;
+}
+.btn {
+    min-width: 132px;
+    height: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:focus {
+    border-color: rgb(209, 40, 40);
+}
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.btn.btn--back:hover {
+    background-color: #d9d9d9;
+}
+.btn.btn-disable {
+    background-color: #a7a7a7;
+    color: #707070;
+    cursor: default;
+}
+.btn--primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+/* Pagina3tion */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    font-size: 1.6rem;
+    
+
+}
+.pagination-item {
+    --height:30px;
+    height: var(--height);
+    display: block;
+    line-height: var(--height);
+    border-radius: 2px;
+    min-width: 40px;
+    font-size: 1.6rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.pagination-item-active {
+    background-color: var(--primary-color);
+}
+.pagination-item a {
+    color: #959494;
+}
+.pagination-item-list {
+    text-decoration: none;   
+}
+.pagination-item-list-active {
+    color: var(--white-color) !important;
+    text-decoration: none;
+}
+.pagination-item-active:hover {
+    background-color: #e9654b;
+}
+.modal__overlay:focus ~ .modal__body {
+    display: none;
+}
+.modal.open {
+    display: flex;
+}
+.modal.open .authen--form--login{
+    display: none;
+}
+
+.modal.on {
+    display: flex;
+}
+.modal.on .authen--form--register{
+    display: none;
+}
+.primary_color {
+    color: var(--primary-color);
+}

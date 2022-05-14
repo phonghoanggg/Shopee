@@ -1,0 +1,96 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+.loader {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.loader .face {
+    position: absolute;
+    border: 2px solid #ccc;
+}
+.loader .face.face1 {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-top:4px solid rgb(238, 77, 45);
+    border-left:4px solid rgb(238, 77, 45);
+    animation: animate 3s linear infinite;
+}
+.loader .face.face2 {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-bottom:4px solid rgb(20, 202, 81);
+    border-right:4px solid rgb(20, 202, 81);;
+    animation: animate 3s linear reverse infinite;
+}
+.loader .face .cricle {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    /* background: #fff; */
+    transform-origin: left;
+}
+.loader .face.face1 .cricle {
+    transform: rotate(-38deg);
+}
+.loader .face.face2 .cricle {
+    transform: rotate(-52deg);
+}
+.loader .face .cricle::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -4px;
+    right: -8px;
+}
+.loader .face.face1 .cricle::before {
+    background: rgb(238, 77, 45) ;
+    box-shadow: 0 0 20px rgb(238, 77, 45),
+                0 0 40px rgb(238, 77, 45),
+                0 0 60px rgb(238, 77, 45),
+                0 0 80px rgb(238, 77, 45),
+                0 0 100px rgb(238, 77, 45),
+                0 0 0 7px rgb(238, 77, 45, .1);
+}
+.loader .face.face2 .cricle::before {
+    background: rgb(20, 202, 81) ;
+    box-shadow: 0 0 20px rgb(20, 202, 81),
+                0 0 40px rgb(20, 202, 81),
+                0 0 60px rgb(20, 202, 81),
+                0 0 80px rgb(20, 202, 81),
+                0 0 100px rgb(20, 202, 81),
+                0 0 0 7px rgb(20, 202, 81,.1);
+}
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+
+    }
+}
